@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout stage') {
       steps {
-        git(url: 'https://github.com/viveksdll/django-todo-cicd.git', branch: 'develop')
+        git(url: 'https://github.com/viveksdll/django-todo-cicd.git', branch: 'main')
       }
     }
 
