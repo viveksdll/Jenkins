@@ -8,8 +8,20 @@ pipeline {
     }
 
     stage('error') {
-      steps {
-        echo 'Test Stage'
+      parallel {
+        stage('error') {
+          steps {
+            echo 'Test Stage'
+          }
+        }
+
+        stage('Install') {
+          steps {
+            sh '''RUN pip install django==3.2
+RUN python manage.py'''
+          }
+        }
+
       }
     }
 
