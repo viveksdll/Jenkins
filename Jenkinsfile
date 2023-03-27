@@ -9,7 +9,7 @@ pipeline {
 
     stage('error') {
       steps {
-        sh 'ls -la'
+        echo 'Test Stage'
       }
     }
 
