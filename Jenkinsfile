@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('error') {
+    stage('LOg') {
       steps {
         echo 'todo app'
       }
